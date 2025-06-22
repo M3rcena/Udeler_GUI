@@ -12,7 +12,7 @@ let win;
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
-    icon: __dirname + "/assets/images/build/icon.png",
+    icon: path.join(__dirname, "assets/images/build/icon.png"),
     resizable: true,
     webPreferences: {
       nodeIntegration: true,

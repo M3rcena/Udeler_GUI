@@ -16,8 +16,21 @@
     "dist": "build"
   },
   "build": {
+    "files": [
+      "index.html",
+      "index.js",
+      "assets/**/*",
+      "locale/**/*"
+    ],
     "directories": {
       "buildResources": "assets/images/build"
+    },
+    "win": {
+      "icon": "assets/images/build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "linux": {
       "category": "Utility"

@@ -1,6 +1,6 @@
 {
   "name": "Udeler",
-  "version": "1.8.2",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/FaisalUmair/udemy-downloader-gui.git"
@@ -30,18 +30,19 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "electron": "^8.2.4",
-    "electron-builder": "^22.3.2",
+    "electron": "^9.4.4",
+    "electron-builder": "^22.14.13",
     "electron-download-tf": "^4.3.4"
   },
   "dependencies": {
     "dialogs": "^2.0.1",
     "electron-settings": "^3.2.0",
-    "jquery": "^3.5.0",
-    "mkdirp": "^0.5.1",
-    "mt-files-downloader": "git+https://github.com/FaisalUmair/mt-files-downloader-wrapper.git",
-    "node-vtt-to-srt": "git+https://github.com/riazXrazor/vtt-to-srt.git",
-    "sanitize-filename": "^1.6.1",
-    "socket.io": "^2.2.0"
+    "jquery": "^3.7.1",
+    "mkdirp": "^1.0.4",
+    "moment": "^2.30.1",
+    "mt-files-downloader": "^0.2.5",
+    "node-vtt-to-srt": "^1.0.1",
+    "sanitize-filename": "^1.6.3",
+    "socket.io": "^2.5.1"
   }
 }

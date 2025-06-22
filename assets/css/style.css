@@ -1,3 +1,95 @@
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Login Page Styles */
+.login.grid {
+  height: 100vh;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 30px;
+}
+
+.login-header .icon {
+  font-size: 4em;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.login-header h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.login-header p {
+  font-size: 1.1em;
+  color: #a0a0a0;
+  margin-top: 10px;
+}
+
+.login.grid .ui.horizontal.divider {
+  color: #a0a0a0;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  margin: 30px 0;
+}
+
+.login.grid .ui.blue.button {
+  background-color: #00ffff;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.login.grid .ui.blue.button:hover {
+  background-color: #00cccc;
+}
+
+.login.grid .ui.form {
+  margin-top: 20px;
+}
+
+.login.grid .ui.checkbox label,
+.login.grid .ui.checkbox .box {
+  color: #a0a0a0 !important;
+}
+
+.login.grid .ui.checkbox input:checked~.box,
+.login.grid .ui.checkbox input:checked~label {
+  color: #00ffff !important;
+}
+
+.login.grid input[type="text"] {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Main dashboard layout */
+.ui.dashboard {
+  display: none;
+}
+
 .ui.dimmer {
   position: fixed;
 }
@@ -7,102 +99,2261 @@
 }
 
 .ui.login.grid {
-  padding-top: 90px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.ui.login.header {
-  font-family: Verdana;
-  font-weight: normal;
+.ui.login.grid>.row {
+  flex-direction: column;
+  align-items: center;
 }
 
-body .dialog-widget.background {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-.dialog-widget.alert {
+.ui.login.grid .column {
+  max-width: 450px;
   text-align: center;
+  margin: 0 auto;
 }
 
-.dialog-widget.alert button.ok {
-  margin-top: 30px;
-  float: none;
-}
-
-.ui.dashboard {
-  display: none;
-}
-
-.ui.dashboard .sidebar.menu .item {
-  padding-left: 7px;
-  padding-right: 7px;
-  max-width: 84px;
-  word-wrap: break-word;
-}
-
-.ui.dashboard > .content {
-  margin-left: 95px;
+.ui.login.grid .form {
   width: 100%;
 }
 
-.ui.dashboard > .content .section {
-  display: none;
-  padding: 8px 10px 0px 0px;
-  margin-bottom: 10px;
+.ui.login.grid .ui.login.header {
+  color: #ffffff !important;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.ui.dashboard > .content .courses.section {
+.ui.login.grid .ui.login.header .icon {
+  color: #00ffff !important;
+  font-size: 5em;
+  margin-bottom: 25px;
+}
+
+.ui.login.grid .ui.login.header h2 {
+  color: #ffffff !important;
+  font-size: 3em;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ui.login.grid .ui.form {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+body .dialog-widget.background {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+.dialog-widget.alert,
+.dialog-widget.prompt {
+  background-color: #2c2f33 !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  border: 1px solid #00ffff !important;
+  padding: 30px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) !important;
+  text-align: center !important;
+  max-width: 400px !important;
+  width: 90% !important;
+}
+
+.dialog-widget.alert .title,
+.dialog-widget.prompt .title {
+  font-size: 1.4em !important;
+  margin-bottom: 25px !important;
+  display: block !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+.dialog-widget.alert .divider,
+.dialog-widget.prompt .divider {
+  display: none !important;
+}
+
+.dialog-widget.alert button,
+.dialog-widget.prompt button {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  font-size: 1em !important;
+  transition: all 0.3s ease !important;
+  margin: 10px !important;
+  display: inline-block !important;
+  width: auto !important;
+  float: none !important;
+  cursor: pointer !important;
+}
+
+.dialog-widget.alert button:focus,
+.dialog-widget.prompt button:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+}
+
+.dialog-widget.alert button:hover,
+.dialog-widget.prompt button:hover {
+  transform: translateY(-2px);
+  background-color: #4a4e55 !important;
+}
+
+.dialog-widget.alert button.ok,
+.dialog-widget.prompt button.ok {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+}
+
+.dialog-widget.alert button.ok:hover,
+.dialog-widget.prompt button.ok:hover {
+  background-color: #00e6e6 !important;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Input field styling for prompt dialogs */
+.dialog-widget.prompt input[type="text"] {
+  background-color: #333 !important;
+  border: 1px solid #444 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 12px 15px !important;
+  font-size: 1em !important;
+  width: 100% !important;
+  margin: 15px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.dialog-widget.prompt input[type="text"]:focus {
+  outline: none !important;
+  border-color: #00ffff !important;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3) !important;
+}
+
+.dialog-widget.prompt input[type="text"]::placeholder {
+  color: #888 !important;
+}
+
+/* Ensure dialog is centered and properly positioned */
+.dialog-widget.background {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 9999 !important;
+}
+
+.ui.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c2f33;
+  border-radius: 30px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.ui.bottom-nav .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 90px;
+  height: 70px;
+}
+
+.ui.bottom-nav .item i.icon {
+  margin: 0 0 5px 0;
+  font-size: 1.4em;
+  line-height: 1;
+}
+
+.ui.bottom-nav .item span {
+  line-height: 1.2;
   display: block;
 }
 
-.ui.dashboard > .content .ui.courses.items,
-.ui.dashboard > .content .courses.section .load-more.button {
+.ui.bottom-nav .item:hover {
+  background-color: #3a3e42;
+  color: #00ffff;
+}
+
+.ui.bottom-nav .active.item {
+  background-color: #00ffff;
+  color: #2c2f33 !important;
+}
+
+.ui.bottom-nav .active.item:hover {
+  background-color: #00e6e6;
+  color: #2c2f33 !important;
+}
+
+.main-content {
+  margin-left: 0;
+  width: 100%;
+  padding-bottom: 120px;
+  /* To prevent content from being hidden by the nav bar */
+}
+
+.main-content .section {
+  display: none;
+  padding: 8px 10px 0px 10px;
+  margin-bottom: 10px;
+}
+
+.main-content .courses.section {
+  display: block;
+}
+
+.main-content .ui.courses.items,
+.main-content .courses.section .load-more.button {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.ui.dashboard .courses .course .action.buttons .button {
-  border-radius: 0;
+.ui.divided.unstackable.courses.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 25px;
 }
 
-.ui.dashboard .courses .course {
-  position: relative;
+.ui.dashboard .courses .course.item {
+  background-color: #2c2f33;
+  border-radius: 15px;
+  padding: 25px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0 !important;
+  border: 1px solid #40444b;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ui.dashboard .courses .course.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: #00ffff44;
+}
+
+.ui.dashboard .courses .course .ui.tiny.image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px auto !important;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ui.dashboard .courses .course .ui.tiny.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ui.dashboard .courses .course .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui.dashboard .courses .course .coursename {
+  color: #ffffff;
+  font-size: 1.4em;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ui.dashboard .courses .course .extra.download-status {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #40444b;
+}
+
+.ui.dashboard .courses .course .action.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ui.dashboard .courses .course .extra .button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 20px !important;
+  font-size: 1em !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  margin: 5px !important;
+}
+
+.ui.dashboard .courses .course .extra .button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+.ui.dashboard .courses .course .extra .button:disabled {
+  background-color: #40444b !important;
+  color: #888888 !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .ui.dashboard .courses .course .message {
-  display: none;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
 }
 
-.ui.dashboard .courses .course .message:hover {
-  cursor: pointer;
+.ui.dashboard .courses .course .message i.icon {
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+
+.ui.dashboard .courses .course .download-success.message {
+  background-color: #00ff0022;
+  border: 1px solid #00ff00;
+  color: #adffad;
+}
+
+.ui.dashboard .courses .course .download-error.message {
+  background-color: #ff000022;
+  border: 1px solid #ff0000;
+  color: #ffadad;
+}
+
+.ui.dashboard .courses .course .progress {
+  margin: 15px 0;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ui.dashboard .courses .course .progress .bar {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+.ui.dashboard .courses .course .progress .label {
+  color: #ffffff;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
 
 .ui.dashboard .courses .course .download-quality,
 .ui.dashboard .courses .course .download-speed {
   display: none;
   position: absolute;
-  top: 3px;
+  top: 10px;
+  background-color: #40444b;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
 }
 
 .ui.dashboard .courses .course .download-quality {
-  left: 0;
+  left: 10px;
 }
 
 .ui.dashboard .courses .course .download-speed {
-  right: 0;
+  right: 10px;
+}
+
+.ui.dashboard>.content .about .donate-button {
+  text-align: center;
+}
+
+.ui.dashboard>.content .ui.downloads.section .ui.courses.segment {
+  padding-bottom: 30px;
+}
+
+.ui.login.authenticator i.icon.user.secret:before {
+  content: "\f21b";
+}
+
+.ui.about.section {
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-header .icon {
+  font-size: 2em;
+  margin-right: 15px;
+  color: #00ffff;
+}
+
+.about-header h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.app-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-version {
+  display: flex;
+  align-items: center;
+}
+
+.app-version h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.app-version .icon {
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: #00ffff;
+}
+
+.check-updates.button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  border-radius: 5px !important;
+}
+
+.check-updates.button:hover {
+  background-color: #00e6e6 !important;
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.about-card {
+  background-color: #2c2f33;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.about-card h3 {
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff44;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.about-card .list .item .header {
+  color: #00ffff !important;
+  transition: color 0.3s ease;
+}
+
+.about-card .list .item .header:hover {
+  color: #ffffff !important;
+}
+
+.about-card .list .item .description {
+  color: #a0a0a0;
+}
+
+.about-card .list .item .icon {
+  color: #00ffff;
+}
+
+.about-card p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.donate-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.donate-link img {
+  max-width: 200px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.donate-link img:hover {
+  transform: scale(1.05);
+}
+
+/* Settings Page Styles */
+.ui.settings.section {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.settings-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.settings-card {
+  background-color: #2c2f33;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.settings-card h3 {
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff44;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.settings-card h3 .icon {
+  margin-right: 10px;
+}
+
+.ui.form .field>label {
+  color: #ffffff;
+  font-weight: 300;
+  margin-bottom: 10px !important;
+}
+
+.ui.form input[type="text"],
+.ui.form input[type="number"],
+.ui.form .ui.dropdown {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid #40444b !important;
+  border-radius: 5px !important;
+}
+
+.ui.form input[type="text"]:focus,
+.ui.form input[type="number"]:focus,
+.ui.form .ui.dropdown:focus {
+  border-color: #00ffff !important;
+}
+
+.ui.form .ui.dropdown .menu {
+  background-color: #2c2f33 !important;
+  border: 1px solid #40444b !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  z-index: 1000 !important;
+}
+
+.ui.form .ui.dropdown .menu>.item {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 12px 15px !important;
+}
+
+.ui.form .ui.dropdown .menu>.item:hover {
+  background-color: #40444b !important;
+  color: #00ffff !important;
+}
+
+.ui.form .ui.dropdown .menu>.selected.item {
+  background-color: #00ffff22 !important;
+  color: #00ffff !important;
+}
+
+.ui.form .ui.checkbox label {
+  color: #cccccc !important;
+}
+
+.ui.form .ui.checkbox input:checked~label {
+  color: #00ffff !important;
+}
+
+.save-button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  border-radius: 5px !important;
+  padding: 15px !important;
+  font-size: 1.2em !important;
+  margin-top: 15px !important;
+}
+
+.save-button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
 }
 
 .ui.dashboard .courses .course .extra .button {
   padding: 7px 15px;
 }
 
-.ui.dashboard > .content .about .donate-button {
+.ui.dashboard>.content .about .donate-button {
   text-align: center;
 }
 
-.ui.dashboard > .content .ui.downloads.section .ui.courses.segment {
+.ui.dashboard>.content .ui.downloads.section .ui.courses.segment {
   padding-bottom: 30px;
 }
 
-.ui.login.authenticator i.icon.user.secret:before {
-  content: "\f21b";
+/* Refresh Button Styles */
+.refresh-courses.button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  margin-top: 15px !important;
+  transition: all 0.3s ease !important;
+  font-size: 1em !important;
+}
+
+.refresh-courses.button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.refresh-courses.button .icon {
+  margin-right: 8px;
+}
+
+.courses-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 25px;
+}
+
+.courses-header .ui.search.form {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.refresh-courses.button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease !important;
+  font-size: 1em !important;
+  flex-shrink: 0;
+  margin-top: 0 !important;
+}
+
+.refresh-courses.button .icon {
+  margin-right: 8px;
+}
+
+.refresh-courses.button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.ui.dashboard .courses .course.item {
+  background-color: #2c2f33;
+  border-radius: 15px;
+  padding: 25px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px !important;
+  border: 1px solid #40444b;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui.dashboard .courses .course.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: #00ffff44;
+}
+
+.ui.dashboard .courses .course .ui.tiny.image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px auto !important;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ui.dashboard .courses .course .ui.tiny.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ui.dashboard .courses .course .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui.dashboard .courses .course .coursename {
+  color: #ffffff;
+  font-size: 1.4em;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ui.dashboard .courses .course .extra.download-status {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #40444b;
+}
+
+.ui.dashboard .courses .course .action.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ui.dashboard .courses .course .extra .button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 20px !important;
+  font-size: 1em !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  margin: 5px !important;
+}
+
+.ui.dashboard .courses .course .extra .button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+.ui.dashboard .courses .course .extra .button:disabled {
+  background-color: #40444b !important;
+  color: #888888 !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ui.dashboard .courses .course .message {
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.ui.dashboard .courses .course .message i.icon {
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+
+.ui.dashboard .courses .course .download-success.message {
+  background-color: #00ff0022;
+  border: 1px solid #00ff00;
+  color: #adffad;
+}
+
+.ui.dashboard .courses .course .download-error.message {
+  background-color: #ff000022;
+  border: 1px solid #ff0000;
+  color: #ffadad;
+}
+
+.ui.dashboard .courses .course .progress {
+  margin: 15px 0;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ui.dashboard .courses .course .progress .bar {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+.ui.dashboard .courses .course .progress .label {
+  color: #ffffff;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  .ui.dashboard .courses .course.item {
+    flex-direction: column;
+  }
+
+  .ui.dashboard .courses .course .ui.tiny.image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .ui.dashboard .courses .course .coursename {
+    text-align: center;
+  }
+}
+
+#toaster-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: #2c2f33;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border-left: 5px solid #00ffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateX(120%);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Lecture List Modal */
+.ui.dimmer.modals.page.transition.visible.active {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.ui.lecture-list.modal {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid #00ffff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7) !important;
+  overflow: hidden;
+}
+
+.ui.lecture-list.modal>.header {
+  background-color: #2c2f33 !important;
+  color: #00ffff !important;
+  border-bottom: 1px solid #00ffff44 !important;
+  border-radius: 0 !important;
+}
+
+.ui.lecture-list.modal>.close.icon {
+  color: #00ffff !important;
+  top: 1.0535rem !important;
+  right: 1.5rem !important;
+}
+
+.ui.lecture-list.modal .scrolling.content {
+  background-color: #1e1e1e !important;
+  padding: 2rem !important;
+}
+
+.ui.lecture-list.modal .list .item {
+  display: flex !important;
+  align-items: center !important;
+  padding: 15px 10px !important;
+  border-bottom: 1px solid #40444b;
+}
+
+.ui.lecture-list.modal .list .item .content {
+  color: #ffffff;
+}
+
+.ui.lecture-list.modal .list .item .right.floated.content {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.ui.lecture-list.modal .download-lecture-button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border-radius: 5px !important;
+}
+
+.ui.lecture-list.modal .download-lecture-button:hover {
+  background-color: #00e6e6 !important;
+}
+
+.ui.lecture-list.modal .download-lecture-button.disabled {
+  background-color: #40444b !important;
+  color: #888888 !important;
+}
+
+.ui.lecture-list.modal .download-lecture-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Video List Popup Modal Styles */
+.ui.video-list-popup.modal {
+  background-color: #2c2f33 !important;
+  border-radius: 15px !important;
+  border: 1px solid #40444b !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.ui.video-list-popup.modal>.header {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #00ffff !important;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 20px 25px !important;
+  font-size: 1.3em !important;
+  font-weight: 600 !important;
+}
+
+.ui.video-list-popup.modal>.close.icon {
+  color: #ffffff !important;
+  top: 20px !important;
+  right: 20px !important;
+  font-size: 1.2em !important;
+}
+
+.ui.video-list-popup.modal>.close.icon:hover {
+  color: #00ffff !important;
+  transform: scale(1.1);
+}
+
+.ui.video-list-popup.modal .scrolling.content {
+  padding: 25px !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  background-color: #2c2f33 !important;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar-track {
+  background: #40444b;
+  border-radius: 4px;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 4px;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar-thumb:hover {
+  background: #00e6e6;
+}
+
+.chapter-header {
+  margin-bottom: 15px;
+}
+
+.chapter-header h4 {
+  color: #00ffff !important;
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #40444b !important;
+}
+
+.video-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 12px 15px !important;
+  margin: 8px 0 !important;
+  background-color: #40444b !important;
+  border-radius: 10px !important;
+  border: 1px solid #4a4e54 !important;
+  transition: all 0.3s ease !important;
+}
+
+.video-item:hover {
+  background-color: #4a4e54 !important;
+  border-color: #00ffff44 !important;
+  transform: translateX(5px);
+}
+
+.video-item span {
+  color: #ffffff !important;
+  font-size: 0.95em !important;
+  flex: 1 !important;
+  margin-right: 15px !important;
+}
+
+.video-item span i.icon {
+  margin-right: 8px !important;
+  color: #00ffff !important;
+  width: 16px !important;
+  text-align: center !important;
+}
+
+.video-item .ui.button {
+  background-color: #00ffff !important;
+  color: #2c2f33 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  min-width: 80px !important;
+}
+
+.video-item .ui.button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.video-item .ui.button:disabled {
+  background-color: #666 !important;
+  color: #999 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.video-item .ui.button.red {
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+}
+
+.video-item .ui.button.green {
+  background-color: #27ae60 !important;
+  color: #ffffff !important;
+}
+
+/* Article and Content Modal Styles */
+.ui.article.modal,
+.ui.content.modal,
+.ui.quiz.modal,
+.ui.practice.modal {
+  background-color: #2c2f33 !important;
+  border-radius: 15px !important;
+  border: 1px solid #40444b !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.ui.article.modal>.header,
+.ui.content.modal>.header,
+.ui.quiz.modal>.header,
+.ui.practice.modal>.header {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #00ffff !important;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 20px 25px !important;
+  font-size: 1.3em !important;
+  font-weight: 600 !important;
+}
+
+.ui.article.modal>.close.icon,
+.ui.content.modal>.close.icon,
+.ui.quiz.modal>.close.icon,
+.ui.practice.modal>.close.icon {
+  color: #ffffff !important;
+  top: 20px !important;
+  right: 20px !important;
+  font-size: 1.2em !important;
+}
+
+.ui.article.modal>.close.icon:hover,
+.ui.content.modal>.close.icon:hover,
+.ui.quiz.modal>.close.icon:hover,
+.ui.practice.modal>.close.icon:hover {
+  color: #00ffff !important;
+  transform: scale(1.1);
+}
+
+.ui.article.modal .scrolling.content,
+.ui.content.modal .scrolling.content,
+.ui.quiz.modal .content,
+.ui.practice.modal .content {
+  padding: 25px !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+}
+
+.article-content,
+.content-body {
+  color: #ffffff !important;
+  line-height: 1.6 !important;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6,
+.content-body h1,
+.content-body h2,
+.content-body h3,
+.content-body h4,
+.content-body h5,
+.content-body h6 {
+  color: #00ffff !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.article-content p,
+.content-body p {
+  margin-bottom: 15px !important;
+}
+
+.article-content a,
+.content-body a {
+  color: #00ffff !important;
+  text-decoration: none !important;
+}
+
+.article-content a:hover,
+.content-body a:hover {
+  color: #00e6e6 !important;
+  text-decoration: underline !important;
+}
+
+.ui.quiz.modal .content p,
+.ui.practice.modal .content p {
+  color: #ffffff !important;
+  margin-bottom: 20px !important;
+  font-size: 1.1em !important;
+}
+
+.ui.quiz.modal .content .ui.button,
+.ui.practice.modal .content .ui.button {
+  background-color: #00ffff !important;
+  color: #2c2f33 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-size: 1em !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.ui.quiz.modal .content .ui.button:hover,
+.ui.practice.modal .content .ui.button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+/* General Modal Dark Theme Overrides */
+.ui.modal {
+  background-color: #2c2f33 !important;
+  border-radius: 15px !important;
+  border: 1px solid #40444b !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.ui.modal>.header {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #00ffff !important;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 20px 25px !important;
+  font-size: 1.3em !important;
+  font-weight: 600 !important;
+}
+
+.ui.modal>.close.icon {
+  color: #ffffff !important;
+  top: 20px !important;
+  right: 20px !important;
+  font-size: 1.2em !important;
+}
+
+.ui.modal>.close.icon:hover {
+  color: #00ffff !important;
+  transform: scale(1.1);
+}
+
+.ui.modal .content {
+  color: #ffffff !important;
+  background-color: #2c2f33 !important;
+}
+
+.ui.modal .scrolling.content {
+  padding: 25px !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  background-color: #2c2f33 !important;
+}
+
+/* Modal Dimmer Overlay */
+.ui.dimmer {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ui.page.dimmer {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ui.modals.dimmer {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Specific Modal Styles */
+.ui.video-list-popup.modal {
+  background-color: #2c2f33 !important;
+  border-radius: 15px !important;
+  border: 1px solid #40444b !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.ui.video-list-popup.modal>.header {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #00ffff !important;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 20px 25px !important;
+  font-size: 1.3em !important;
+  font-weight: 600 !important;
+}
+
+.ui.video-list-popup.modal>.close.icon {
+  color: #ffffff !important;
+  top: 20px !important;
+  right: 20px !important;
+  font-size: 1.2em !important;
+}
+
+.ui.video-list-popup.modal>.close.icon:hover {
+  color: #00ffff !important;
+  transform: scale(1.1);
+}
+
+.ui.video-list-popup.modal .scrolling.content {
+  padding: 25px !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  background-color: #2c2f33 !important;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar-track {
+  background: #40444b;
+  border-radius: 4px;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 4px;
+}
+
+.ui.video-list-popup.modal .scrolling.content::-webkit-scrollbar-thumb:hover {
+  background: #00e6e6;
+}
+
+/* Download All Button Styles */
+.download-all-btn {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-size: 0.9em !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  margin-left: 15px !important;
+}
+
+.download-all-btn:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+.download-all-btn:disabled {
+  background-color: #40444b !important;
+  color: #888888 !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.download-all-btn i.icon {
+  margin-right: 5px !important;
+}
+
+/* Downloads Page Styles */
+.ui.downloads.section {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.downloads-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #40444b;
+}
+
+.downloads-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.downloads-title i.icon {
+  font-size: 2em;
+  color: #00ffff;
+}
+
+.downloads-title h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  color: #ffffff;
+}
+
+.downloads-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.clear-downloads.button,
+.refresh-downloads.button {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border: 1px solid #4a4e54 !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-size: 0.9em !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.clear-downloads.button:hover {
+  background-color: #e74c3c !important;
+  border-color: #e74c3c !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.refresh-downloads.button:hover {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border-color: #00ffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+.downloads-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  background-color: #2c2f33;
+  border: 1px solid #40444b;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  border-color: #00ffff44;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2em;
+  font-weight: 600;
+  color: #00ffff;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.downloads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-item {
+  background-color: #2c2f33;
+  border: 1px solid #40444b;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.download-item:hover {
+  border-color: #00ffff44;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-item-icon {
+  font-size: 2em;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.download-item-icon.video {
+  background-color: #e74c3c22;
+  color: #e74c3c;
+}
+
+.download-item-icon.article {
+  background-color: #3498db22;
+  color: #3498db;
+}
+
+.download-item-icon.file {
+  background-color: #f39c1222;
+  color: #f39c12;
+}
+
+.download-item-icon.ebook {
+  background-color: #9b59b622;
+  color: #9b59b6;
+}
+
+.download-item-icon.audio {
+  background-color: #1abc9c22;
+  color: #1abc9c;
+}
+
+.download-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.download-item-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.download-item-details {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9em;
+  color: #888888;
+}
+
+.download-item-course {
+  color: #00ffff;
+  font-weight: 500;
+}
+
+.download-item-section {
+  color: #888888;
+}
+
+.download-item-size {
+  color: #888888;
+}
+
+.download-item-date {
+  color: #888888;
+}
+
+.download-item-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.download-item-actions .ui.button {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border: 1px solid #4a4e54 !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  font-size: 0.8em !important;
+  transition: all 0.3s ease !important;
+}
+
+.download-item-actions .ui.button:hover {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border-color: #00ffff !important;
+  transform: translateY(-1px);
+}
+
+.download-item-actions .ui.button.delete {
+  background-color: #e74c3c22 !important;
+  color: #e74c3c !important;
+  border-color: #e74c3c44 !important;
+}
+
+.download-item-actions .ui.button.delete:hover {
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+  border-color: #e74c3c !important;
+}
+
+.download-item-actions .ui.button.open {
+  background-color: #27ae6022 !important;
+  color: #27ae60 !important;
+  border-color: #27ae6044 !important;
+}
+
+.download-item-actions .ui.button.open:hover {
+  background-color: #27ae60 !important;
+  color: #ffffff !important;
+  border-color: #27ae60 !important;
+}
+
+.empty-downloads {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888888;
+}
+
+.empty-downloads i.icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #40444b;
+}
+
+.empty-downloads h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #888888;
+}
+
+.empty-downloads p {
+  font-size: 1em;
+  color: #666666;
+}
+
+/* Course Downloads Section Styles */
+.course-downloads-section {
+  margin-bottom: 40px;
+  background-color: #2c2f33;
+  border: 1px solid #40444b;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.course-downloads-header {
+  background-color: #40444b;
+  padding: 20px 25px;
+  border-bottom: 1px solid #4a4e54;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #00ffff;
+  margin: 0;
+}
+
+.course-file-count {
+  background-color: #00ffff22;
+  color: #00ffff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.course-downloads-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.course-downloads-list .download-item {
+  background-color: #1e1e1e;
+  border: 1px solid #40444b;
+  border-radius: 10px;
+  padding: 18px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.course-downloads-list .download-item:hover {
+  border-color: #00ffff44;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: #2a2a2a;
+}
+
+.course-downloads-list .download-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-footer .update-info {
+  margin-top: 15px;
+  color: #00ffff;
+}
+
+/* New Login Page Styles */
+.login.grid {
+  height: 100vh;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 30px;
+}
+
+.login-header .icon {
+  font-size: 4em;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.login-header h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.login-header p {
+  font-size: 1.1em;
+  color: #a0a0a0;
+  margin-top: 10px;
+}
+
+.login.grid .ui.horizontal.divider {
+  color: #a0a0a0;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  margin: 30px 0;
+}
+
+.login.grid .ui.blue.button {
+  background-color: #00ffff;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.login.grid .ui.blue.button:hover {
+  background-color: #00cccc;
+}
+
+.login.grid .ui.form {
+  margin-top: 20px;
+}
+
+.login.grid .ui.checkbox label,
+.login.grid .ui.checkbox .box {
+  color: #a0a0a0 !important;
+}
+
+.login.grid .ui.checkbox input:checked~.box,
+.login.grid .ui.checkbox input:checked~label {
+  color: #00ffff !important;
+}
+
+.login.grid input[type="text"] {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Fix dialog button conflicts and dropdown issues */
+/* Ensure save button keeps its original styling */
+.save-button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  border-radius: 5px !important;
+  padding: 15px !important;
+  font-size: 1.2em !important;
+  margin-top: 15px !important;
+}
+
+.save-button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Fix dropdown menu styling to ensure they work properly */
+.ui.form .ui.dropdown .menu {
+  background-color: #2c2f33 !important;
+  border: 1px solid #40444b !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  z-index: 1000 !important;
+}
+
+.ui.form .ui.dropdown .menu>.item {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 12px 15px !important;
+}
+
+.ui.form .ui.dropdown .menu>.item:hover {
+  background-color: #40444b !important;
+  color: #00ffff !important;
+}
+
+.ui.form .ui.dropdown .menu>.selected.item {
+  background-color: #00ffff22 !important;
+  color: #00ffff !important;
+}
+
+/* Ensure dropdown trigger works properly */
+.ui.form .ui.dropdown {
+  background-color: #333 !important;
+  border: 1px solid #444 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+}
+
+.ui.form .ui.dropdown:hover {
+  border-color: #00ffff !important;
+}
+
+.ui.form .ui.dropdown .text {
+  color: #ffffff !important;
+}
+
+.ui.form .ui.dropdown .default.text {
+  color: #888 !important;
+}
+
+/* Ensure other buttons keep their styling */
+.refresh-courses.button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease !important;
+  font-size: 1em !important;
+  flex-shrink: 0;
+  margin-top: 0 !important;
+}
+
+.refresh-courses.button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.ui.dashboard .courses .course .extra .button {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 20px !important;
+  font-size: 1em !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  margin: 5px !important;
+}
+
+.ui.dashboard .courses .course .extra .button:hover {
+  background-color: #00e6e6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+/* Ensure dialog buttons are specific to dialogs only */
+.dialog-widget.alert button,
+.dialog-widget.prompt button {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  font-size: 1em !important;
+  transition: all 0.3s ease !important;
+  margin: 10px !important;
+  display: inline-block !important;
+  width: auto !important;
+  float: none !important;
+  cursor: pointer !important;
+}
+
+.dialog-widget.alert button:focus,
+.dialog-widget.prompt button:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+}
+
+.dialog-widget.alert button:hover,
+.dialog-widget.prompt button:hover {
+  transform: translateY(-2px);
+  background-color: #4a4e55 !important;
+}
+
+.dialog-widget.alert button.ok,
+.dialog-widget.prompt button.ok {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+}
+
+.dialog-widget.alert button.ok:hover,
+.dialog-widget.prompt button.ok:hover {
+  background-color: #00e6e6 !important;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Login Page Specific Styles - Very specific to avoid conflicts */
+.ui.login.grid {
+  height: 100vh;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.ui.login.grid .row {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.ui.login.grid .column {
+  max-width: 450px;
+}
+
+.ui.login.grid .center.aligned.row,
+.ui.login.grid .center.aligned.row>.column {
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui.login.grid .ui.login.header {
+  color: #ffffff !important;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ui.login.grid .ui.login.header .icon {
+  color: #00ffff !important;
+  font-size: 5em;
+  margin-bottom: 25px;
+}
+
+.ui.login.grid .ui.login.header h2 {
+  color: #ffffff !important;
+  font-size: 3em;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ui.login.grid .ui.form {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.ui.login.grid .ui.form .field {
+  margin-bottom: 20px;
+}
+
+.ui.login.grid .ui.form .field label {
+  color: #ffffff !important;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ui.login.grid .ui.form input[type="text"] {
+  background-color: #333 !important;
+  border: 1px solid #444 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 12px 15px !important;
+  font-size: 1em !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.ui.login.grid .ui.form input[type="text"]:focus {
+  outline: none !important;
+  border-color: #00ffff !important;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3) !important;
+}
+
+.ui.login.grid .ui.form input[type="text"]::placeholder {
+  color: #888 !important;
+}
+
+.ui.login.grid .ui.checkbox {
+  color: #a0a0a0 !important;
+}
+
+.ui.login.grid .ui.checkbox label {
+  color: #a0a0a0 !important;
+  font-size: 1em;
+}
+
+.ui.login.grid .ui.checkbox input:checked~label {
+  color: #00ffff !important;
+}
+
+.ui.login.grid .ui.horizontal.divider {
+  color: #a0a0a0 !important;
+  border-top: 1px solid #444 !important;
+  border-bottom: 1px solid #444 !important;
+  margin: 30px 0 !important;
+  font-size: 1.1em !important;
+}
+
+.ui.login.grid .ui.blue.button {
+  background-color: #00ffff !important;
+  color: #1e1e1e !important;
+  font-weight: bold !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 15px 20px !important;
+  font-size: 1.1em !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.ui.login.grid .ui.blue.button:hover {
+  background-color: #00cccc !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+.ui.login.grid .ui.blue.button i.icon {
+  margin-right: 8px;
+}
+
+/* Login dimmer styles */
+.ui.login.grid .ui.login.dimmer,
+.ui.login.grid .ui.authenticator.dimmer {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ui.login.grid .ui.login.dimmer .loader,
+.ui.login.grid .ui.authenticator.dimmer .loader {
+  color: #00ffff !important;
+  font-size: 1.2em !important;
+}
+
+/* Custom Scrollbar Styles - Dark Theme */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff 0%, #00cccc 100%);
+  border-radius: 6px;
+  border: 1px solid #00ffff;
+  box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00e6e6 0%, #00b3b3 100%);
+  box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #00cccc 0%, #009999 100%);
+  box-shadow: inset 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar-corner {
+  background: #1e1e1e;
+  border-radius: 6px;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #1e1e1e;
+}
+
+/* Specific scrollbar for main content areas */
+.main-content::-webkit-scrollbar,
+.ui.modal .scrolling.content::-webkit-scrollbar,
+.ui.downloads.section::-webkit-scrollbar {
+  width: 14px;
+}
+
+.main-content::-webkit-scrollbar-track,
+.ui.modal .scrolling.content::-webkit-scrollbar-track,
+.ui.downloads.section::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 7px;
+  border: 1px solid #40444b;
+}
+
+.main-content::-webkit-scrollbar-thumb,
+.ui.modal .scrolling.content::-webkit-scrollbar-thumb,
+.ui.downloads.section::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff 0%, #00cccc 100%);
+  border-radius: 7px;
+  border: 1px solid #00ffff;
+  box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.3);
+}
+
+.main-content::-webkit-scrollbar-thumb:hover,
+.ui.modal .scrolling.content::-webkit-scrollbar-thumb:hover,
+.ui.downloads.section::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00e6e6 0%, #00b3b3 100%);
+  box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.5);
+}
+
+/* Scrollbar for dropdown menus */
+.ui.dropdown .menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ui.dropdown .menu::-webkit-scrollbar-track {
+  background: #2c2f33;
+  border-radius: 4px;
+}
+
+.ui.dropdown .menu::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff 0%, #00cccc 100%);
+  border-radius: 4px;
+  border: 1px solid #00ffff;
+}
+
+.ui.dropdown .menu::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00e6e6 0%, #00b3b3 100%);
+}
+
+/* Scrollbar for settings and forms */
+.ui.form::-webkit-scrollbar,
+.ui.settings.section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ui.form::-webkit-scrollbar-track,
+.ui.settings.section::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 5px;
+  border: 1px solid #40444b;
+}
+
+.ui.form::-webkit-scrollbar-thumb,
+.ui.settings.section::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff 0%, #00cccc 100%);
+  border-radius: 5px;
+  border: 1px solid #00ffff;
+}
+
+.ui.form::-webkit-scrollbar-thumb:hover,
+.ui.settings.section::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00e6e6 0%, #00b3b3 100%);
+}
+
+/* Ensure scrollbars are visible on all scrollable elements */
+.ui.modal .scrolling.content,
+.ui.downloads.section,
+.main-content,
+.ui.form,
+.ui.dropdown .menu {
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #1e1e1e;
+}
+
+/* Logout Confirmation Popup - Dark Theme */
+.dialog-widget.confirm {
+  background-color: #2c2f33 !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  border: 1px solid #00ffff !important;
+  padding: 30px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) !important;
+  text-align: center !important;
+  max-width: 400px !important;
+  width: 90% !important;
+}
+
+.dialog-widget.confirm .title {
+  font-size: 1.4em !important;
+  margin-bottom: 25px !important;
+  display: block !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+.dialog-widget.confirm .divider {
+  display: none !important;
+}
+
+.dialog-widget.confirm button {
+  background-color: #40444b !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  font-size: 1em !important;
+  transition: all 0.3s ease !important;
+  margin: 10px !important;
+  display: inline-block !important;
+  width: auto !important;
+  float: none !important;
+  cursor: pointer !important;
+}
+
+.dialog-widget.confirm button:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+}
+
+.dialog-widget.confirm button:hover {
+  transform: translateY(-2px);
+  background-color: #4a4e55 !important;
+}
+
+.dialog-widget.confirm button.ok {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+}
+
+.dialog-widget.confirm button.ok:hover {
+  background-color: #00e6e6 !important;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.dialog-widget.confirm button.cancel {
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+}
+
+.dialog-widget.confirm button.cancel:hover {
+  background-color: #c0392b !important;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
 }

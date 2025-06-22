@@ -1,120 +1,236 @@
-# Udeler | Udemy Course Downloader (GUI)
+# Udeler GUI - Udemy Course Downloader
 
-A cross platform (Windows, Mac, Linux) desktop application for downloading Udemy Courses.
+A modern, cross-platform desktop application for downloading Udemy courses with a beautiful dark theme interface.
 
-### Udeler 2.0 Feature Requests:
+## ✨ Features
 
-I am planning to make Udeler 2.0 a big release with a lot of new features and improvements. For requesting a feature, Click [here](https://github.com/FaisalUmair/udemy-downloader-gui/issues/172)
+- **🎨 Modern Dark Theme** - Beautiful cyan-accented dark interface
+- **📱 Cross-Platform** - Windows, macOS, and Linux support
+- **🎥 Multiple Content Types** - Videos, articles, files, e-books, and audio
+- **⚡ Individual Downloads** - Download specific lectures or entire courses
+- **📊 Download Management** - Track and manage all your downloads
+- **🌍 Multi-language Support** - Available in multiple languages
+- **🔧 Customizable Settings** - Video quality, download paths, and more
+- **⏸️ Pause/Resume** - Interrupt and resume downloads anytime
+- **📁 Organized Downloads** - Automatic course and section organization
 
-### Facing Login Issues?
+## 🚀 Quick Start
 
-Since Udeler v1.6.0, there is support for login through Udeler Authenticator (A chrome extension for easily authenticating a Udemy account with Udeler).
+### 1. Download & Install
 
-#### How to use Udeler Authenticator?
+Download the latest version for your platform:
 
-1. Install the extension from [here](https://www.udeler.com/extension)
+| Platform | Download |
+|----------|----------|
+| Windows | [Download Windows x64](https://github.com/M3rcena/Udeler_GUI/releases/latest) |
+| macOS | [Download macOS](https://github.com/M3rcena/Udeler_GUI/releases/latest) |
+| Linux | [Download Linux](https://github.com/M3rcena/Udeler_GUI/releases/latest) |
 
-2. After installing/enabling the extension, open udeler desktop app, you will see a new anonymous icon on the login page. Click the icon and it will start to listen for any login requests from your chrome web browser.
+### 2. Get Your Udemy Access Token
 
-3. Open Udemy website on your chrome web browser and simply login to your account. Udeler app will detect the login and will let you in. If you are already logged in to Udemy, you can simply visit the website and it will still detect your account.
+Since Udemy has updated their authentication system, you'll need to manually obtain your access token:
 
-#### Project Update:
+#### Method 1: Using Browser Developer Tools (Recommended)
 
-**`I am currently not able to give this project enough time to fix the current issues or add new features. I am busy with some other projects. But I do plan to fix all the issues and add some new features. So the maintenance is temporarily on hold and this project is not dead. I also plan to make a web only version of Udeler.`**
+1. **Open your web browser** (Chrome, Firefox, Edge, etc.)
+2. **Go to [Udemy.com](https://www.udemy.com)** and log in to your account
+3. **Open Developer Tools**:
+   - **Chrome/Edge**: Press `F12` or `Ctrl+Shift+I` (Windows/Linux) / `Cmd+Option+I` (Mac)
+   - **Firefox**: Press `F12` or `Ctrl+Shift+I` (Windows/Linux) / `Cmd+Option+I` (Mac)
+4. **Go to the Network tab** in Developer Tools
+5. **Refresh the page** or navigate to any course page
+6. **Look for API requests** - filter by "api-2.0" or search for requests to `udemy.com/api-2.0`
+7. **Click on any API request** and look for the "Authorization" header
+8. **Copy the token** - it will look like: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...`
 
-![](https://i.imgur.com/nsaAgDU.gif)
+#### Method 2: Using Browser Console
 
-### :fire: Features
+1. **Log in to Udemy** in your browser
+2. **Open Developer Tools** and go to the **Console** tab
+3. **Run this command**:
+   ```javascript
+   console.log(localStorage.getItem('access_token') || 'Token not found in localStorage');
+   ```
+4. **Copy the token** if found
 
-- _`Choose video quality.`_
-- _`Download multiple courses at once.`_
-- _`Set Download Start and Download End.`_
-- _`Pause/Resume download at any time.`_
-- _`Choose download directory.`_
-- _`Multilingual (English,Italian,Spanish).`_
+#### Method 3: Using Browser Extensions
 
-### Disclaimer:
+1. **Install a cookie/header viewer extension** like "Cookie Editor" or "Header Editor"
+2. **Navigate to Udemy.com** and log in
+3. **Use the extension** to view request headers and find the Authorization token
 
-This software is intended to help you download Udemy courses for personal use only. Sharing the content of your subscribed courses is strictly prohibited under Udemy Terms of Use. Each and every course on Udemy is subjected to copyright infringement.
-This software does not magically download any paid course available on Udemy, you need to provide your Udemy login credentials to download the courses you have enrolled in. Udeler downloads the lecture videos by simply using the source of the video player returned to the user by Udemy after proper authentication, you can also do the same manually. Many download managers use same method to download videos on a web page. This app only automates the process of a user doing this manually in a web browser.
+### 3. Use the Access Token
 
-### Downloads:
+1. **Open Udeler GUI**
+2. **Click "Login with Access Token"**
+3. **Paste your access token** when prompted
+4. **Click "Login"** to access your courses
 
-| Platform | Arch    | Version | Link                                                                                                                         |
-| -------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Windows  | x64     | 1.8.2   | [Download](https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v1.8.2/Udeler-Setup-1.8.2-windows-x64.exe)  |
-| Windows  | x86     | 1.8.2   | [Download](https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v1.8.2/Udeler-Setup-1.8.2-windows-x86.exe)  |
-| Mac      | x64     | 1.8.2   | [Download](https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v1.8.2/Udeler-1.8.2-mac.dmg)                |
-| Linux    | x86_x64 | 1.8.2   | [Download](https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v1.8.2/Udeler-1.8.2-linux-x86_x64.AppImage) |
+## 📖 Detailed Usage Guide
 
-### Note:
+### Getting Started
 
-By default the courses will be downloaded to the user's Download folder. The structure of course content will be preserved.
+1. **Launch the application** after installation
+2. **Enter your access token** using the methods above
+3. **Browse your courses** - all your enrolled courses will appear
+4. **Click "Download"** on any course to see available content
+5. **Select individual lectures** or use "Download All" for entire courses
 
-# For Developers
+### Download Options
 
-### Contributing:
+- **Video Quality**: Choose from available qualities (720p, 1080p, etc.)
+- **Download Range**: Set start and end points for course downloads
+- **File Types**: Download videos, articles, PDFs, and other course materials
+- **Organization**: Files are automatically organized by course and section
 
-Any contributions are welcome, if you plan to contribute please read the [contributing](https://github.com/FaisalUmair/udemy-downloader-gui/blob/master/CONTRIBUTING.md) docs first.
+### Settings
 
-### Prerequisites:
+Access settings via the gear icon to configure:
+- **Download Path**: Choose where files are saved
+- **Video Quality**: Set default quality preference
+- **Language**: Change interface language
+- **Download Options**: Configure retry, subtitle, and attachment settings
 
+## 🛠️ For Developers
+
+### Prerequisites
+
+- Node.js (v20 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/M3rcena/Udeler_GUI.git
+cd Udeler_GUI
+
+# Install dependencies
+npm install
+
+# Start the application
+npm start
 ```
-You must have npm and nodejs installed.
-```
 
-### To use the application:
+### Building
 
-```
-1. Clone the project
-2. Run npm install
-3. Run npm start
-```
-
-### Build:
-
-Detect Platform:
-
-```
+```bash
+# Build for current platform
 npm run dist
-```
 
-Windows:
+# Build for specific platforms
+npm run build-win    # Windows
+npm run build-mac    # macOS
+npm run build-linux  # Linux
 
-```
-npm run build-win
-```
-
-Mac:
-
-```
-npm run build-mac
-```
-
-Linux:
-
-```
-npm run build-linux
-```
-
-Cross Platform:
-
-```
+# Build for all platforms
 npm run build
 ```
 
-#### To force 32 bit build:
+### Development
 
-_Append "-- --ia32" to npm run command_
+```bash
+# Start in development mode
+npm start
 
-Example:
-
+# Run with hot reload
+npm run dev
 ```
-npm run build-win -- --ia32
-```
 
-## Donate
+## 🔧 Troubleshooting
 
-Udeler is free and without any ads. If you appreciate that, please consider donating to the Developer.
+### Common Issues
 
-[![Donate](https://raw.githubusercontent.com/FaisalUmair/udemy-downloader-gui/master/assets/images/donate.png)](https://www.udeler.com/donate)
+**"Invalid Access Token" Error**
+- Ensure you're copying the full token (starts with `Bearer `)
+- Check that your Udemy account is active
+- Try logging out and back into Udemy, then get a fresh token
+
+**"No Courses Found" Error**
+- Verify your access token is correct
+- Ensure you have enrolled courses in your Udemy account
+- Check your internet connection
+
+**Download Failures**
+- Some videos may be DRM-protected and cannot be downloaded
+- Check your download path has sufficient space
+- Verify your internet connection is stable
+
+**Login Issues**
+- Clear browser cache and cookies
+- Try using a different browser
+- Ensure you're not using a VPN that blocks Udemy
+
+### Getting Help
+
+1. **Check existing issues** on GitHub
+2. **Search for similar problems** in the discussions
+3. **Create a new issue** with detailed information:
+   - Your operating system and version
+   - Udeler GUI version
+   - Steps to reproduce the problem
+   - Error messages (if any)
+
+## 📋 System Requirements
+
+- **Windows**: Windows 10 or later (64-bit recommended)
+- **macOS**: macOS 10.14 or later
+- **Linux**: Ubuntu 18.04+, Fedora 28+, or similar
+- **RAM**: 4GB minimum, 8GB recommended
+- **Storage**: 1GB free space for application + space for downloads
+
+## 🔒 Privacy & Security
+
+- **No data collection**: Udeler GUI doesn't collect or transmit any personal data
+- **Local storage**: All settings and data are stored locally on your device
+- **Secure authentication**: Uses official Udemy API with your access token
+- **Open source**: Full transparency with publicly available source code
+
+## ⚖️ Legal Disclaimer
+
+This software is intended for **personal use only** to download courses you have legally purchased on Udemy. 
+
+**Important:**
+- Only download courses you have enrolled in
+- Do not share downloaded content with others
+- Respect Udemy's Terms of Service and copyright laws
+- This tool automates the same process you could do manually in a browser
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### How to Contribute
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Make your changes** and test thoroughly
+4. **Commit your changes**: `git commit -m 'Add amazing feature'`
+5. **Push to the branch**: `git push origin feature/amazing-feature`
+6. **Open a Pull Request**
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Original Developer**: Faisal Umair for creating the initial Udeler project
+- **Contributors**: All community members who have contributed to this project
+- **Udemy**: For providing the platform and API that makes this possible
+
+## 💝 Support the Project
+
+If you find this project helpful, please consider:
+
+- ⭐ **Starring the repository**
+- 🐛 **Reporting bugs** and issues
+- 💡 **Suggesting new features**
+- 📝 **Contributing code** or documentation
+- 🗣️ **Sharing with others** who might find it useful
+
+---
+
+**Note**: This is a community-maintained fork of the original Udeler project, updated with modern features and improved user experience while maintaining the core functionality.
+
+**Made with ❤️ by M3rcena**

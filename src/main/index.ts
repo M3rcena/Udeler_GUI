@@ -318,6 +318,8 @@ function createUpdaterWindow(): void {
   })
 }
 
+const isWindowsStore = Boolean(process.windowsStore)
+
 app.whenReady().then(() => {
   electronApp.setAppUserModelId('com.m3rcena.udeler')
 
@@ -1129,10 +1131,14 @@ app.whenReady().then(() => {
     initDb(settings.downloadPath)
   }
 
-  if (is.dev) {
-    createWindow()
-  } else {
+  if (!is.dev && !isWindowsStore && !app.getVersion().includes('debug')) {
     createUpdaterWindow()
+    autoUpdater.checkForUpdatesAndNotify().catch((err: unknown) => {
+      console.warn('Auto-updater bypassed:', err)
+      createWindow()
+    })
+  } else {
+    createWindow()
   }
 
   app.on('activate', function () {

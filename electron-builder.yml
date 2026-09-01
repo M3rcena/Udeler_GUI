@@ -16,13 +16,21 @@ win:
   icon: resources/icon.ico
   target:
     - target: nsis
+      arch:
+        - x64
     - target: portable
+      arch:
+        - x64
     - target: appx
+      arch:
+        - x64
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: true
+  oneClick: true
+  perMachine: false
 portable:
   artifactName: ${name}-${version}-portable.${ext}
 appx:
@@ -31,7 +39,8 @@ appx:
   identityName: ${env.MS_APPX_IDENTITY_NAME}
   publisherDisplayName: ${env.MS_APPX_PUBLISHER_DISPLAY_NAME}
   publisher: ${env.MS_APPX_PUBLISHER_ID}
-  backgroundColor: '#09090e'
+  backgroundColor: 'transparent'
+  showNameOnTiles: true
   languages:
     - en-US
     - el-GR

@@ -1,0 +1,241 @@
+{
+  "_meta": {
+    "name": "Italiano (IT)",
+    "countryCode": "it",
+    "dir": "ltr"
+  },
+  "words": {
+    "localDrive": "Unità Locale",
+    "resume": "Riprendi",
+    "pause": "Pausa",
+    "stopAll": "Ferma Tutto",
+    "waiting": "In Attesa",
+    "inProgress": "In Corso",
+    "completed": "Completato",
+    "failed": "Fallito",
+    "drmLocked": "DRM Bloccato",
+    "drmProtected": "DRM Protetto",
+    "library": "Libreria",
+    "removeAll": "Rimuovi tutti",
+    "goBack": "Indietro",
+    "offline": "Disconnesso",
+    "files": "file",
+    "cancel": "Annulla",
+    "new": "Nuovo",
+    "quiz": "Quiz",
+    "understood": "Capito",
+    "unlimited": "Illimitato",
+    "loading": "Caricamento..."
+  },
+  "components": {
+    "sidebar": {
+      "courses": "I miei corsi",
+      "downloads": "Downloads",
+      "settings": "Impostazioni",
+      "about": "Info su",
+      "lightMode": "☀️ Modalità Chiara",
+      "darkMode": "🌙 Modalità Scura",
+      "logout": "Esci"
+    },
+    "helpModal": {
+      "locateToken": "Individua il tuo Token",
+      "followSteps": "Segui questi passaggi nel tuo browser per collegare in modo sicuro il tuo account.",
+      "loginUdemy": "Apri il tuo browser web e accedi al tuo account {{udemyBold}}.",
+      "pressKey": "Premi {{f12Key}} (o fare clic con il tasto destro del mouse e selezionare \"Ispezione\") per aprire gli strumenti sviluppatore.",
+      "navigateToApplication": "Entra nella tab {{applicationStrong}} (Crome/Edge) o {{storageBold}} (Firefox).",
+      "navigateKeys": {
+        "application": "Applicazione",
+        "storage": "Memoria"
+      },
+      "cookies": {
+        "main": "Espandi {{cookiesStrong}} e clicca {{udemyURL}}. Trova la riga chiamata {{tokenCode}}, copia il suo valore e incollalo qui sotto!",
+        "cookies": "Cookie"
+      },
+      "gotToken": "Ho il mio token"
+    },
+    "libraryHealth": {
+      "title": "Salute & Integrità Della Biblioteca",
+      "scanning": "Scansione della libreria in corso...",
+      "runCheck": "Esegui Controllo Integrità",
+      "verifyChecksums": "Verifica Hash Checksum",
+      "healthy": "La biblioteca è perfettamente sana! Tutti i checksum corrispondono.",
+      "corruptedFiles": "Rilevato/I File Danneggiato/I {{issuesLength}}",
+      "reason": "Motivo: {{reason}}",
+      "delete": "Elimina (Archiviato)",
+      "autoRepair": "Riparazione Automatica"
+    },
+    "pathAlert": {
+      "setupRequired": "Impostazione Richiesta",
+      "selectFolder": "Devi selezionare un {{downloadFolder}} nel menu Impostazioni prima di poter salvare il contenuto del corso sul tuo computer.",
+      "downloadFolder": "Cartella Di Download"
+    }
+  },
+  "views": {
+    "about": {
+      "updateTab": {
+        "checkingUpdates": "Verifica aggiornamenti..."
+      }
+    },
+    "downloads": {
+      "deleteMenu": {
+        "deleteAllFiles": "",
+        "description": "",
+        "deleting": "Eliminazione...",
+        "deleteAll": "Sì, Cancella Tutto",
+        "failed": "Impossibile eliminare i file della libreria.",
+        "errorOccurred": "Si è verificato un errore durante l'eliminazione dei file di libreria."
+      }
+    },
+    "login": {
+      "errors": {
+        "tooEarly": "La finestra di accesso è stata chiusa prima del completamento dell'autenticazione.",
+        "tryManual": "Si è verificato un errore imprevisto. Si prega di provare il metodo del token manuale."
+      },
+      "appDesc": "Moderno Downloader di Corsi",
+      "businessAccount": "Account Udemy Business",
+      "orgSubdomain": "Sottodominio Organizzazione",
+      "waitingLogin": "In attesa del login...",
+      "authenticated": "Autenticato!",
+      "signInBusiness": "Accedi tramite Udemy Business",
+      "signInNormal": "Accedi in modo sicuro tramite Udemy",
+      "manualToken": "Oppure token manuale",
+      "udemyAccessToken": "Token Di Accesso Udemy",
+      "howTo": "Come trovare il tuo token",
+      "connecting": "Connessione a Udemy...",
+      "manualLogin": "Login Manuale",
+      "endToEnd": "Archiviazione Crittografata End-to-End"
+    },
+    "courses": {
+      "orphanedLectures": {
+        "archivedVideo": "Video Archiviato",
+        "removedBy": "📦 Archiviato (rimosso dall'istruttore)"
+      },
+      "title": "I miei corsi",
+      "toolbar": {
+        "enqueuing": "Accodamento...",
+        "selectedQueue": "Coda Selezionata",
+        "selectAll": "Seleziona tutto",
+        "deselectAll": "Deseleziona tutto",
+        "search": "Cerca corsi...",
+        "refreshCourses": "Aggiorna Corsi"
+      },
+      "offlineDrive": "Drive Offline",
+      "archivedOn": "Archiviato il:",
+      "view": {
+        "offline": "Visualizza (Offline)",
+        "content": "Visualizza contenuto"
+      },
+      "noCourses": "Nessun corso trovato",
+      "fixSearch": "Prova a modificare la tua query di ricerca.",
+      "curriculum": {
+        "courseCurriculum": "Curriculum Del Corso {{currentMapping}}",
+        "savedTo": "- Salvato in {{currentMappingName}}",
+        "pauseDownloads": "Pausa Download",
+        "resumeDownloads": "Riprendi Download",
+        "stopQueue": "Ferma La Coda",
+        "removeFiles": "Rimuovi file",
+        "externalDrive": "Unità Esterna",
+        "pin": "Pin su Drive",
+        "unpin": "Unpin: {{currentMappingName}}",
+        "decrypt": "Decifratura Curriculum Del Corso...",
+        "deleteFile": "Elimina file"
+      },
+      "delete": {
+        "title": "Eliminare Il Contenuto Del Corso?",
+        "subtitle": "Stai per cancellare definitivamente tutti i file scaricati per {{title}} dal disco del computer.",
+        "noDownloads": "Nessun Download Trovato",
+        "noLocalDownloads": "Al momento non ci sono file locali scaricati rilevati sul disco per"
+      },
+      "pin": {
+        "title": "Pin Corso?",
+        "subtitle": "",
+        "moving": "Spostamento...",
+        "yesMove": "Sì, Sposta File E Pin",
+        "noMove": "No, Solo Pin (Nuovo Download)"
+      },
+      "unpin": {
+        "title": "Unpin Corso?",
+        "subtitle": "Vuoi trasferire automaticamente i file scaricati nella tua cartella locale?",
+        "yesMove": "Sì, Sposta I File E Sblocca",
+        "noMove": "No, Sblocca Solo (Lascia File)"
+      },
+      "queue": {
+        "success": "Accodato Con Successo",
+        "addedQueue": "Aggiunti {{queuedCount}} nuovi elementi alla coda in background."
+      }
+    },
+    "settings": {
+      "title": "Impostazioni dell'applicazione",
+      "quality": {
+        "auto": "Auto (Migliore Disponibile)",
+        "highest": "Risoluzione Più Alta",
+        "lowest": "Più Basso (Spazio Salve)"
+      },
+      "debug": {
+        "title": "Risoluzione Dei Problemi E Diagnostica",
+        "subtitle": "Se si verificano problemi con i corsi mancanti, download falliti, o crash imprevisti, generare un file di registro diagnostico per aiutare a identificare il problema.",
+        "saved": "Log di debug salvati con successo! Invia questo file allo sviluppatore.",
+        "failed": "Impossibile salvare i log."
+      },
+      "location": {
+        "downloadLocation": "Posizione del download",
+        "browse": "Sfoglia..."
+      },
+      "language": {
+        "title": "Lingua Dell'Applicazione",
+        "select": "Seleziona Lingua Dell'Interfaccia",
+        "communityDriven": "Localizzazione Della Comunità",
+        "content": "Aiutaci a tradurre Udeler Reborn nella tua lingua madre o a migliorare le traduzioni esistenti su Crowdin.",
+        "crowdinBtn": "Traduci su Crowdin"
+      },
+      "preferences": {
+        "downloadPref": "Preferenze Di Download",
+        "videoQual": "Qualità video",
+        "skipAttachments": "Salta Allegati Al Corso",
+        "skipSub": "Salta Sottotitoli / Sottotitoli Chiusi",
+        "autoRetry": "Riprova automaticamente in errore di rete",
+        "runBackground": "Mantieni in esecuzione in background quando chiuso"
+      },
+      "network": {
+        "title": "Rete & Pianificazione",
+        "maxDownload": "Velocità Massima Di Download (Kb/s)",
+        "kbps": "Kilobytes / Sec"
+      },
+      "schedule": {
+        "enable": "Abilita Scaricamenti Pianificati",
+        "startTime": "Ora di inizio",
+        "endTime": "Ora di fine"
+      },
+      "vault": {
+        "title": "Modalità Cassaforte (Archiviazione Crittografata)",
+        "subtitle": "Crittografa i video scaricati e i token di autenticazione sul disco utilizzando il tuo sistema operativo Keychain."
+      },
+      "storage": {
+        "title": "Ottimizzazione Archiviazione",
+        "sweeping": "Pulendo...",
+        "reclaimedSpace": "Spazio Su Disco Ricaricato",
+        "automaticallySaved": "Salvato automaticamente tramite risorse cross-course e deduplicazione video.",
+        "completeRemoved": "Pulizia completata: Rimossi definitivamente i file orfani {{purgedCount}}, liberando {{freedBytes}} dello spazio su disco.",
+        "completeNoFiles": "Pulizia completa: nessun file orfano trovato. La tua memoria è perfettamente ottimizzata!"
+      },
+      "moveFolder": {
+        "title": "Spostare File Scaricati?",
+        "subtitle": "Hai cambiato la tua posizione di download. Vuoi migrare tutti i corsi precedentemente scaricati nella nuova cartella?",
+        "moving": "Spostamento File...",
+        "yesMove": "Sì, Sposta I File",
+        "noMove": "No, Lasciali Là",
+        "cancel": "Annulla Modifica"
+      },
+      "buttons": {
+        "savedSuccess": "Impostazioni Salvate Con Successo!",
+        "saveAll": "Salva Tutte Le Impostazioni",
+        "cleanOrphaned": "Pulisci Blobs Orfani",
+        "exportDebug": "Esporta Log Di Debug"
+      }
+    }
+  },
+  "sponsors": {
+    "about": "Supporto tramite Sponsors GitHub",
+    "sidebar": "Sostienimi"
+  }
+}
